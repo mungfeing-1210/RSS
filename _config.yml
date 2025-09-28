@@ -11,10 +11,10 @@ email: mungfeing-1210@example.com
 url: "https://mungfeing-1210.github.io"
 baseurl: "/RSS"
 
-# 主题选择 - Jekyll 的"视图层"
-theme: jekyll-theme-minimal
+# 主题选择 - Jekyll 的"视图层"（GitHub Pages 兼容）
+theme: minima
 
-# 插件配置 - 这是生成 RSS 的核心
+# 插件配置 - 这是生成 RSS 的核心（GitHub Pages 兼容）
 plugins:
   - jekyll-feed  # 自动生成 feed.xml
 
