@@ -1,0 +1,8 @@
+# 创建 GitHub 仓库后，运行以下命令：
+
+# 1. 推送代码到 GitHub
+git push -u origin main
+
+# 2. 如果上面命令失败，可能需要先设置分支名：
+git branch -M main
+git push -u origin main
