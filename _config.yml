@@ -1,0 +1,68 @@
+# Jekyll 配置文件
+# 这是整个系统的核心配置，定义了如何将 Markdown 转换为 HTML 和 RSS
+
+# 站点基本信息
+title: mungfeing-1210的博客
+description: 只上传 Markdown，自动生成网站与 RSS
+author: mungfeing-1210
+email: mungfeing-1210@example.com
+
+# URL 配置 - 这是关键的第一性原理配置
+url: "https://mungfeing-1210.github.io"
+baseurl: "/RSS"
+
+# 主题选择 - Jekyll 的"视图层"
+theme: jekyll-theme-minimal
+
+# 插件配置 - 这是生成 RSS 的核心
+plugins:
+  - jekyll-feed  # 自动生成 feed.xml
+
+# 永久链接配置 - 确保文章链接稳定，这对 RSS 订阅很重要
+permalink: /:year/:month/:day/:title/
+
+# 构建配置
+markdown: kramdown
+highlighter: rouge
+
+# 排除文件 - 避免 Jekyll 处理不必要的文件
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - setup.sh
+  - DEPLOYMENT.md
+
+# 包含文件 - 确保必要文件被处理
+include:
+  - _pages
+
+# 默认 Front Matter - 为所有页面设置默认值
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# 集合配置 - 如果需要特殊的内容类型
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# 时区设置
+timezone: Asia/Shanghai
+
+# 语言设置
+lang: zh-CN
